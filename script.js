@@ -12,7 +12,7 @@ function originNumber(number) {
 }
 console.log(originNumber(num));
 
-//2- Полученный результат возвести в степень 3, используя только 1 оператор (не Math.pow)
+//2- Полученный результат возвести в степень 3.
 let stringToNumber = parseInt(originNumber(num));
 
 let exponent = 3;
