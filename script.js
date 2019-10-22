@@ -1,21 +1,28 @@
 'use strict';
+//var message = age >= 21 ? "Allowed" : "Denied";
+//val_res = cond_1_bool ? ((cond_1_1_bool || cond_1_2_bool) ? res_1_1 : res_1_2) : res_2_1;
+let namePerson = 'Максим';
+namePerson == 'Артем' ? 'директор' : 'Максим' ? 'преподаватель' : 'студент';
+console.log(namePerson);
 
-//1- Создать переменную num, вывести в консоль произведение (умножение) цифр этого числа
-let num = 266219;
+/*У нас есть переменная namePerson. Если значение этой переменной “Артем” то вывести в консоль “директор”, если значение “Максим” то вывести в консоль “преподаватель”, с любым другим значением вывести в консоль “студент”
 
-num = (266219).toString().split('');
-let numTotal = num[0] * num[1] * num[2] * num[3] * num[4] * num[5];
+  Решить задачу с помощью нескольких тернарных операторов, без использования if или switch
+  
 
-//2- Полученный результат возвести в степень 3, используя только 1 оператор (не Math.pow)
-let stringToNumber = parseInt(numTotal, 10);
-console.log(stringToNumber);
+Переменная lang может принимать 2 значения: 'ru' 'en'.
+Написать условия при котором в зависимости от значения lang будут выводится дни недели на русском или английском языке. Решите задачу
 
-let exponent = 3;
-let result = stringToNumber ** exponent;
+через if, 
 
-//3- Вывести на экран первые 2 цифры полученного числа
-let finalNumber = result.toString().split('');
+через switch-case 
 
-console.log(finalNumber[0] + finalNumber[1]);
+через многомерный массив без ифов и switch.
 
-//blabla
+
+
+
+
+
+
+ */
