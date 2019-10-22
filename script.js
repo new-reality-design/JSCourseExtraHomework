@@ -17,3 +17,5 @@ let result = stringToNumber ** exponent;
 let finalNumber = result.toString().split('');
 
 console.log(finalNumber[0] + finalNumber[1]);
+
+//blabla
