@@ -1,23 +1,18 @@
 'use strict';
 
-console.log(
-  'Вариант первый- короткий способ найдённый по той ссылке с несколькими вариантами:'
-);
-
-//1- Создать переменную num, вывести в консоль произведение (умножение) цифр этого числа
-let num = 266219;
-
-function originNumber(number) {
-  return [...number.toString()].reduce((a, c) => a * c);
+let str =
+  ' The night is dark and full of terrors, the day bright and beautiful and full of hope. ';
+console.log(str.length); //проверка первоначальной длины
+function changeString(s) {
+  if (typeof str !== 'string') {
+    console.log('Ой, ведь это не строка.');
+  } else if (str.length <= 30) {
+    return console.log((str = str.trim()));
+  } else {
+    return console.log((str = str.trim().substring(0, 30) + '...'));
+  }
 }
-console.log(originNumber(num));
 
-//2- Полученный результат возвести в степень 3.
-let stringToNumber = parseInt(originNumber(num));
-
-let exponent = 3;
-let result = stringToNumber ** exponent;
-
-//3- Вывести на экран первые 2 цифры полученного числа
-let finalNumber = result.toString(10).split('');
-console.log(finalNumber[0] + finalNumber[1]);
+changeString(str);
+console.log(str.length);
+console.log(str.charAt(0)); //проверка первого символа
