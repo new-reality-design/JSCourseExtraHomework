@@ -1,19 +1,36 @@
 'use strict';
 
-//1- Создать переменную num, вывести в консоль произведение (умножение) цифр этого числа
-let num = 266219;
+/**
+ * 1) Создать массив arr = []
+— Записать в него 7 любых многозначных чисел в виде строк
+— Вывести в консоль только те, что начинаются с цифры 2 или 4 (Должны присутствовать в массиве)
+ */
 
-num = (266219).toString().split('');
-let numTotal = num[0] * num[1] * num[2] * num[3] * num[4] * num[5];
+let arr = ['345', '242', '787', '999', '424', '100', '245'];
+let arrContainer = [];
 
-//2- Полученный результат возвести в степень 3, используя только 1 оператор (не Math.pow)
-let stringToNumber = parseInt(numTotal, 10);
-console.log(stringToNumber);
+let filterNum = arr.filter(item => {
+  if (item[0] === '2' || item[0] === '4') {
+    return arrContainer.push(item);
+  }
+});
+console.log('arrContainer', arrContainer);
 
-let exponent = 3;
-let result = stringToNumber ** exponent;
-
-//3- Вывести на экран первые 2 цифры полученного числа
-let finalNumber = result.toString().split('');
-
-console.log(finalNumber[0] + finalNumber[1]);
+/** 
+ * 2) Вывести в столбик все простые числа от 1 до 100
+— Рядом с каждым числом написать оба делителя данного числа
+Например: “Делители этого числа: 1 и n”
+*/
+function isPrime(num) {
+  if (num < 2) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+for (let i = 0; i < 100; i++) {
+  let one = '1';
+  if (isPrime(i)) {
+    console.log(i, 'Делители этого числа: ' + one + ' и ' + i);
+  }
+}
